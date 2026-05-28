@@ -31,8 +31,7 @@
     <tr>
         <td>EIR</td>
         <td>Informaation vaihdon vaatimukset (exchange information requirements)</td>
-        <td><p>Määrittely siitä, mitä informaatiota toimitetaan toimeksiannossa, missä muodossa, millä tarkkuudella ja milloin.</p><p>Informaatiovaatimukset suhteessa toimeksiantoon [1]</p>
-        </td>
+        <td><p>Määrittely siitä, mitä informaatiota toimitetaan toimeksiannossa, missä muodossa, millä tarkkuudella ja milloin.</p><p>Informaatiovaatimukset suhteessa toimeksiantoon [1]</p></td>
     </tr>
     <tr>
         <td>LoIN</td>
