@@ -14,6 +14,8 @@ titlepage: true
 \clearpage
 {{include termit_ja_lyhenteet.md}}
 \newpage
+{{include lahdeluettelo.md}}
+\newpage
 {{include johdanto.md}}
 \newpage
 {{include informaatiovaatimukset.md}}
