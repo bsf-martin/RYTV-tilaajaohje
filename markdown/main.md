@@ -12,6 +12,8 @@ titlepage: true
 #logo-width: "11cm"
 ---
 \clearpage
+{{include termit_ja_lyhenteet.md}}
+\newpage
 {{include johdanto.md}}
 \newpage
 {{include informaatiovaatimukset.md}}
