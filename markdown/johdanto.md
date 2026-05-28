@@ -1,9 +1,16 @@
 # Johdanto
 
-## Dokumentin tarkoitus ja laajuus
+Tämä dokumentti määrittää informaation vaihdon vaatimukset (EIR) ISO 19650 -standardisarjan mukaisesti. Dokumentti strukturoi strategiset tavoitteet mitattaviksi ja ohjattaviksi tietovaatimuksiksi koko hankkeen elinkaaren ajalle. Se muuntaa organisaation strategiset ja projektin tavoitteet mitattaviksi ja sopimuksellisesti sitoviksi tietovaatimuksiksi, joita sovelletaan rakennus‑, infra‑ ja ylläpitohankkeisiin koko niiden elinkaaren ajan.
 
-Tämä EIR -dokumentti määrittelee informaation vaihdon vaatimukset [Projektin nimi] -projektissa. Dokumentti on laadittu ISO 19650-standardisarjan mukaisesti ja sen tarkoituksena on määritellä tilaajan informaatiovaatimukset, jotka ohjaavat informaatiomallipohjaista suunnittelua, rakentamista ja ylläpitoa. EIR määrittelee mitä informaatioa tuotetaan, milloin, miten ja kenen toimesta projektin eri vaiheissa.
-Dokumentti toimii ohjeena kaikille projektin osapuolille ja varmistaa yhteisen ymmärryksen tiedonhallinnan käytännöistä ja vaatimuksista.
+Tämä ohje soveltuu suomalaisiin rakennus-, infra- ja ylläpitohankkeisiin, joissa hyödynnetään ISO 19650 -sarjan mukaista tiedonhallintaa. Ohje perustuu seuraaviin standardeihin ja säädöksiin: ISO 19650-1/2/5, ISO 7817-1, EN 17472, EN 15978, Rakentamislaki 2025 ja Jätelaki 2024. Näiden määräyksiä noudatetaan ensisijaisesti silloin, kun tässä dokumentissa ei anneta tarkempaa ohjetta.
+
+## Dokumentin tarkoitus
+
+EIR toimii kolmessa roolissa:
+
+* Strateginen ohjaus, kääntää organisaation ja projektin tavoitteet (esim. Hiilineutraali Kuopio 2035) konkreettisiksi datapisteiksi
+* Sopimusliite, määrittää mitä, milloin, missä muodossa ja kenen toimesta tieto toimitetaan
+* Laadunvarmistustyökalu, mahdollistaa automaattisen validoinnin ja jatkuvan seurannan.
 
 ## Projektin yleiskuvaus
 
