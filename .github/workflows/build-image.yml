@@ -5,7 +5,7 @@ name: Build image
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "latex-pdf-image" ]
     paths: [ "docker/**", ".github/workflows/build-image.yml" ]
   workflow_dispatch:
 
