@@ -215,6 +215,54 @@ body {
   border-radius: 0 var(--r-sm) var(--r-sm) 0;
 }
 .toc a:hover { background: var(--c-haze); color: var(--c-navy); }
+
+/* Accordion (script adds .has-sub, .toc-sub and .toc-chevron; without it the full list shows) */
+.toc li.has-sub {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px;
+  align-items: start;
+}
+.toc li.has-sub > .toc-sub { grid-column: 1 / -1; }
+.toc-sub {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
+}
+.toc li.open > .toc-sub { grid-template-rows: 1fr; }
+.toc-sub > ul {
+  min-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s 0.2s;
+}
+.toc li.open > .toc-sub > ul { visibility: visible; transition-delay: 0s; }
+.toc-chevron {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--c-blue);
+  cursor: pointer;
+}
+.toc-chevron::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translate(-65%, -50%) rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+.toc li.open > .toc-chevron::before { transform: translate(-50%, -65%) rotate(45deg); }
+.toc-chevron:hover { background: var(--c-haze); color: var(--c-navy); }
+.toc a.in-path { color: var(--c-navy); font-weight: 600; }
 .toc a.active {
   border-left-color: var(--c-lime);
   background: var(--c-haze);
@@ -497,6 +545,7 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .toc { transition: none; }
+  .toc-sub, .toc-sub > ul, .toc-chevron::before { transition: none; }
 }
 
 /* ---- Print ---- */
