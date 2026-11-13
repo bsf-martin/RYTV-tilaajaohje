@@ -89,7 +89,23 @@ $body$
         var c = r.cells[0];
         if (c && !c.textContent.trim()) empty++;
       });
-      if (!empty) return;
+      var firstHead = (t.querySelector('th') || {}).textContent || '';
+      if (!empty || firstHead.trim().toUpperCase() !== 'PIR') {
+        // Plain table: label each cell so CSS can stack rows as cards on small screens
+        var heads = Array.prototype.map.call(t.querySelectorAll('thead th, tr:first-child th'),
+          function (th) { return th.textContent.trim(); });
+        if (heads.length > 1) {
+          t.classList.add('stack');
+          t.querySelectorAll('tbody tr').forEach(function (r) {
+            Array.prototype.forEach.call(r.cells, function (c, i) {
+              if (heads[i]) c.setAttribute('data-label', heads[i]);
+            });
+            var title = Array.prototype.find.call(r.cells, function (c) { return c.textContent.trim(); });
+            if (title) title.classList.add('stack-title');
+          });
+        }
+        return;
+      }
       t.classList.add('grouped');
       var g = -1;
       rows.forEach(function (r) {

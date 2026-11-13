@@ -406,6 +406,72 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
   .site-title { font-size: 0.8125rem; }
 }
 
+/* Long Finnish compounds must wrap rather than overflow */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Narrow screens: ordinary tables become labelled cards, no sideways scrolling */
+@media (max-width: 600px) {
+  .content h1 { font-size: 1.75rem; }
+  .content h2 { font-size: 1.5rem; }
+  .content h3 { font-size: 1.25rem; }
+
+  table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+  table.stack thead {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  table.stack tbody tr { padding: var(--sp-3) var(--sp-3) var(--sp-2); }
+  table.stack td { padding: 0 0 var(--sp-2); }
+  table.stack td:last-child { padding-right: 0; }
+  table.stack td:empty { display: none; }
+  table.stack td.stack-title {
+    font: 700 var(--fs-h4)/1.3 var(--ff-display);
+    color: var(--c-navy);
+    padding-bottom: var(--sp-2);
+  }
+  table.stack td[data-label]:not(.stack-title)::before {
+    content: attr(data-label);
+    display: block;
+    font: 600 var(--fs-label) var(--ff-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-blue);
+  }
+  /* Requirements table (grouped): one block per EIR row, PIR + goal as a heading on group starts */
+  table.grouped, table.grouped tbody, table.grouped tr, table.grouped td { display: block; width: 100%; }
+  table.grouped thead {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  table.grouped tbody tr { padding: var(--sp-3) var(--sp-3) var(--sp-2); }
+  table.grouped tbody tr:not(.group-start) { border-top: 1px solid var(--c-haze); }
+  table.grouped td { padding: 0 0 var(--sp-1); white-space: normal; }
+  table.grouped td:empty { display: none; }
+  table.grouped td:nth-child(1), table.grouped td:nth-child(2) {
+    display: inline-block;
+    width: auto;
+    padding: 0 var(--sp-2) var(--sp-2) 0;
+    font: 700 var(--fs-h4)/1.3 var(--ff-display);
+    color: var(--c-navy);
+  }
+  table.grouped td:nth-child(3) {
+    font: 600 var(--fs-label) var(--ff-display);
+    letter-spacing: 0.06em;
+    color: var(--c-blue);
+  }
+  table.grouped td:nth-child(3):not(:empty) { margin-top: 0; }
+
+  table.stack tbody tr:nth-child(even) { background: none; }
+  table.stack tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--c-haze) 45%, transparent); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .toc { transition: none; }
