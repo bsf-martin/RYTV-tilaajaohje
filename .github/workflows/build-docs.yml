@@ -26,6 +26,7 @@ jobs:
       contents: write
       pages: write
       id-token: write
+      packages: read
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -61,35 +62,19 @@ jobs:
       #  run: |
       #    cd ${{ github.workspace }}/lastrelease      
       #    git checkout -b  ${{ steps.last_release.outputs.tag_name }}
-      - name: Make artefact and staging folders
-        run: |
-          mkdir ${{github.workspace}}/main/artefact
-          mkdir ${{github.workspace}}/main/staging
-          mkdir ${{github.workspace}}/main/gh-pages
-          mkdir ${{github.workspace}}/main/gh-pages/figures
-          cp -r ${{github.workspace}}/main/figures ${{github.workspace}}/main/gh-pages/
-          ls -R ${{github.workspace}}/main/gh-pages/figures
       - name: Build info
         id: vars
         run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
-      - name: Run the build process with imbuilder docker
-        uses: addnab/docker-run-action@v3
-        with:
-          image: mvesanen/imbuilder:latest
-          options: -v ${{ github.workspace }}/main:/git -v ${{ github.workspace }}/lastrelease:/lastrelease
-          run: |  
-            echo "Prosessing intermediate markdown ..."
-            python /docbuild/moustache_handler.py /git/markdown/main.md /git/staging/main.md /Draft /Draft
-            echo "Build main pdf document"
-            ln -s /git/figures/ /git/staging/figures
-            cp /git/figures/logo/* ./
-            python /docbuild/make-pdf.py /git/staging/main.md /git/artefact/RYTV-tilaajaohje.pdf
-            pandoc --template=/git/templates/github-pages.html --toc --number-sections -M build-date="$(date -u +%Y-%m-%d)" -M build-sha=${{ steps.vars.outputs.short }} -M build-sha-full=${{ github.sha }} -M repo-url=https://github.com/${{ github.repository }} -o /git/gh-pages/index.html /git/staging/main.md
-            cp /git/templates/rytv.css /git/gh-pages/rytv.css
-            cp -r /git/templates/fonts /git/gh-pages/fonts
-            cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
-            # make-pdf.py ignores pandoc's exit code, so fail the build explicitly if no PDF was produced
-            test -s /git/artefact/RYTV-tilaajaohje.pdf || { echo "ERROR: PDF was not produced (see LaTeX error above)"; exit 1; }
+      - name: Log in to the container registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+      - name: Build the site and the PDF in the build image
+        run: |
+          docker run --rm -v "${{ github.workspace }}/main:/git" \
+            -e BUILD_SHA=${{ steps.vars.outputs.short }} \
+            -e BUILD_SHA_FULL=${{ github.sha }} \
+            -e REPO_URL=https://github.com/${{ github.repository }} \
+            ghcr.io/${{ github.repository_owner }}/rytv-imbuilder:pandoc-3.14 \
+            sh scripts/build.sh
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
