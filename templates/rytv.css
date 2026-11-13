@@ -295,8 +295,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Heading section numbers from --number-sections */
 .header-section-number {
   margin-right: 0.5em;
-  color: var(--c-blue);
-  font-weight: 600;
+  color: inherit;
+  font-weight: inherit;
 }
 
 /* Anchor links on headings (added by script) */
