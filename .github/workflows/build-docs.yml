@@ -69,6 +69,9 @@ jobs:
           mkdir ${{github.workspace}}/main/gh-pages/figures
           cp -r ${{github.workspace}}/main/figures ${{github.workspace}}/main/gh-pages/
           ls -R ${{github.workspace}}/main/gh-pages/figures
+      - name: Build info
+        id: vars
+        run: echo "short=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
       - name: Run the build process with imbuilder docker
         uses: addnab/docker-run-action@v3
         with:
@@ -81,10 +84,12 @@ jobs:
             ln -s /git/figures/ /git/staging/figures
             cp /git/figures/logo/* ./
             python /docbuild/make-pdf.py /git/staging/main.md /git/artefact/RYTV-tilaajaohje.pdf
-            pandoc --template=/git/templates/github-pages.html --toc --number-sections -o /git/gh-pages/index.html /git/staging/main.md
+            pandoc --template=/git/templates/github-pages.html --toc --number-sections -M build-date="$(date -u +%Y-%m-%d)" -M build-sha=${{ steps.vars.outputs.short }} -M build-sha-full=${{ github.sha }} -M repo-url=https://github.com/${{ github.repository }} -o /git/gh-pages/index.html /git/staging/main.md
             cp /git/templates/rytv.css /git/gh-pages/rytv.css
             cp -r /git/templates/fonts /git/gh-pages/fonts
             cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
+            # make-pdf.py ignores pandoc's exit code, so fail the build explicitly if no PDF was produced
+            test -s /git/artefact/RYTV-tilaajaohje.pdf || { echo "ERROR: PDF was not produced (see LaTeX error above)"; exit 1; }
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

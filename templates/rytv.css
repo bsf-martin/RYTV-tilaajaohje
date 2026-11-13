@@ -186,9 +186,12 @@ body {
 
 /* ---- TOC ---- */
 .toc {
-  position: sticky;
+  /* Fixed to the viewport (not sticky) so it never overlaps or gets pushed by the footer */
+  position: fixed;
   top: var(--nav-h);
-  height: calc(100vh - var(--nav-h));
+  bottom: 0;
+  left: 0;
+  width: var(--toc-w);
   overflow-y: auto;
   padding: var(--sp-6);
   background: var(--c-white);
@@ -272,6 +275,7 @@ body {
 
 /* ---- Content ---- */
 main {
+  grid-column: 2;   /* column 1 is the space reserved for the fixed TOC */
   padding: var(--sp-12) var(--sp-8) var(--sp-16);
   min-width: 0;
 }
@@ -383,6 +387,21 @@ a:hover { color: var(--c-navy); }
 
 strong { font-weight: 600; color: var(--c-navy); }
 
+/* Definition lists (glossary) */
+.content dl { margin: var(--sp-6) 0; }
+.content dt {
+  margin: var(--sp-6) 0 var(--sp-2);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--c-haze);
+  font: 600 1.0625rem/1.35 var(--ff-display);
+  color: var(--c-navy);
+}
+.content dt:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.content dt strong { font-weight: 800; }
+.content dd { margin: 0 0 var(--sp-2) var(--sp-6); }
+.content dd > p { margin-bottom: var(--sp-3); }
+.content dd > p:last-child { margin-bottom: 0; }
+
 blockquote {
   margin: var(--sp-6) 0;
   padding: var(--sp-2) var(--sp-6);
@@ -448,7 +467,7 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
 
 /* ---- Footer ---- */
 .site-footer {
-  grid-column: 1 / -1;
+  margin-left: var(--toc-w);
   padding: var(--sp-6) var(--sp-8);
   background: var(--c-navy);
   color: var(--c-mist);
@@ -460,9 +479,12 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); }
   .toc-toggle { display: block; }
+  main { grid-column: 1; }
+  .site-footer { margin-left: 0; }
   .toc {
     position: fixed;
     inset: var(--nav-h) 0 0 0;
+    width: auto;
     height: auto;
     z-index: 90;
     transform: translateX(-100%);
@@ -473,6 +495,7 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
   main { padding: var(--sp-4) var(--sp-3) var(--sp-8); }
   .page { padding: var(--sp-6) var(--sp-4); margin-bottom: var(--sp-4); }
   .page > h1 { scroll-margin-top: var(--sp-4); }
+  .content dd { margin-left: var(--sp-4); }
   .site-title { font-size: 0.8125rem; }
 }
 
