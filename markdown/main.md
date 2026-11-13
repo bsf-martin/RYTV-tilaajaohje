@@ -1,8 +1,8 @@
 ---
-title: "RYTV 22005_4 EIR - Informaation vaihdon vaatimukset "
-subtitle: "Rakennuskohteiden informaatiomallintamisen tilaajaohje"
+title: "Rakennuskohteiden informaatiomallintamisen tilaajaohje"
+subtitle: "22005_4"
 version: "{{github_release}}, {{draft-version}}"
-author: "RYTV 22005_4 working group"
+author: "Teppo Rauhala, Marko Rajala, Martin French"
 lang: fi
 ---
 
