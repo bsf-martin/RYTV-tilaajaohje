@@ -145,30 +145,116 @@ $body$
         btn.setAttribute('aria-expanded', open);
       });
       toc.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
+        if (e.target.closest && e.target.closest('a')) {
           toc.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
         }
       });
     }
 
-    // Highlight current section in TOC
-    if (toc && 'IntersectionObserver' in window) {
+    // TOC accordion: only level-1 items visible by default; branches open when the
+    // reader scrolls into them or via the chevron button.
+    if (toc) {
+      var uid = 0;
+      toc.querySelectorAll('li').forEach(function (li) {
+        var a = li.querySelector(':scope > a');
+        var sub = li.querySelector(':scope > ul');
+        if (!a || !sub) return;
+        li.classList.add('has-sub');
+        var wrap = document.createElement('div');
+        wrap.className = 'toc-sub';
+        wrap.id = 'toc-sub-' + (++uid);
+        li.insertBefore(wrap, sub);
+        wrap.appendChild(sub);
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'toc-chevron';
+        b.setAttribute('aria-expanded', 'false');
+        b.setAttribute('aria-controls', wrap.id);
+        b.setAttribute('aria-label', 'Näytä alaotsikot: ' + a.textContent.replace(/\s+/g, ' ').trim());
+        li.insertBefore(b, wrap);
+      });
+      toc.classList.add('js-accordion');
+
+      var current = null;
+      var manualOpen = [];   // items the reader opened by hand (stay open)
+      var userClosed = [];   // on-path items the reader closed (respected until the section changes)
+
+      var pathOf = function (a) {
+        var out = [];
+        for (var n = a ? a.parentNode : null; n && n !== toc; n = n.parentNode) {
+          if (n.tagName === 'LI' && n.classList.contains('has-sub')) out.push(n);
+        }
+        return out;
+      };
+      var sync = function () {
+        var path = pathOf(current);
+        toc.querySelectorAll('li.has-sub').forEach(function (li) {
+          var inPath = path.indexOf(li) > -1;
+          var open = manualOpen.indexOf(li) > -1 || (inPath && userClosed.indexOf(li) < 0);
+          li.classList.toggle('open', open);
+          li.querySelector(':scope > .toc-chevron').setAttribute('aria-expanded', open);
+          li.querySelector(':scope > a').classList.toggle('in-path', inPath && li.querySelector(':scope > a') !== current);
+        });
+      };
+      var reveal = function () {
+        if (!current) return;
+        var tr = toc.getBoundingClientRect(), r = current.getBoundingClientRect();
+        if (r.top < tr.top + 40) toc.scrollTop -= tr.top + 40 - r.top;
+        else if (r.bottom > tr.bottom - 16) toc.scrollTop += r.bottom - tr.bottom + 16;
+      };
+      var setCurrent = function (a) {
+        if (a === current) return;
+        if (current) current.classList.remove('active');
+        current = a;
+        current.classList.add('active');
+        var path = pathOf(a);
+        userClosed = userClosed.filter(function (li) { return path.indexOf(li) > -1; });
+        sync();
+        reveal();
+      };
+
+      toc.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('.toc-chevron') : null;
+        if (b) {
+          var li = b.parentNode;
+          var inPath = pathOf(current).indexOf(li) > -1;
+          if (li.classList.contains('open')) {
+            manualOpen = manualOpen.filter(function (x) { return x !== li; });
+            if (inPath) userClosed.push(li);
+          } else {
+            manualOpen.push(li);
+            userClosed = userClosed.filter(function (x) { return x !== li; });
+          }
+          sync();
+          return;
+        }
+        var link = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (link) setCurrent(link);
+      });
+
       var links = {};
       toc.querySelectorAll('a[href^="#"]').forEach(function (a) {
         links[decodeURIComponent(a.getAttribute('href').slice(1))] = a;
       });
-      var current;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting && links[en.target.id]) {
-            if (current) current.classList.remove('active');
-            current = links[en.target.id];
-            current.classList.add('active');
-          }
-        });
-      }, { rootMargin: '-72px 0px -70% 0px' });
-      content.querySelectorAll('h1[id],h2[id],h3[id]').forEach(function (h) { io.observe(h); });
+      var heads = Array.prototype.filter.call(content.querySelectorAll('h1[id],h2[id],h3[id]'), function (h) { return links[h.id]; });
+      // Active section = last heading whose top has passed a line just below the header
+      var update = function () {
+        var best = null;
+        for (var i = 0; i < heads.length; i++) {
+          if (heads[i].getBoundingClientRect().top <= 104) best = heads[i]; else break;
+        }
+        if (best) setCurrent(links[best.id]);
+      };
+      var ticking = false;
+      var onScroll = function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { ticking = false; update(); });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
     }
   })();
   </script>
