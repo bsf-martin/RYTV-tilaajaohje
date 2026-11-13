@@ -366,6 +366,15 @@ td {
 }
 th:last-child, td:last-child { padding-right: 0; }
 tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--c-haze) 45%, transparent); }
+th em { font-style: normal; }
+td:first-child { white-space: nowrap; }
+
+/* Tables grouped by an empty first cell (requirements table): band per group */
+table.grouped tbody tr { background: none; }
+table.grouped tbody tr.group-b { background: color-mix(in srgb, var(--c-haze) 45%, transparent); }
+table.grouped tbody tr.group-start td { border-top: 1px solid var(--c-mist); }
+table.grouped tbody tr.group-start:first-child td { border-top: 0; }
+table.grouped td:first-child { font-weight: 600; color: var(--c-navy); }
 caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font-size: var(--fs-small); }
 
 /* ---- Footer ---- */

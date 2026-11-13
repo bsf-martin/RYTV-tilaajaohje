@@ -80,6 +80,25 @@ $body$
       w.appendChild(t);
     });
 
+    // Tables where rows are grouped by an empty first cell (e.g. PIR -> EIR rows):
+    // mark group starts and band by group instead of by row.
+    content.querySelectorAll('table').forEach(function (t) {
+      var rows = t.querySelectorAll('tbody tr');
+      var empty = 0;
+      rows.forEach(function (r) {
+        var c = r.cells[0];
+        if (c && !c.textContent.trim()) empty++;
+      });
+      if (!empty) return;
+      t.classList.add('grouped');
+      var g = -1;
+      rows.forEach(function (r) {
+        if (r.cells[0].textContent.trim()) g++;
+        r.classList.add(g % 2 ? 'group-b' : 'group-a');
+        if (r.cells[0].textContent.trim()) r.classList.add('group-start');
+      });
+    });
+
     // Anchor links on headings
     content.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach(function (h) {
       var a = document.createElement('a');
