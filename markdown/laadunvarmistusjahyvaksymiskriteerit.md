@@ -33,6 +33,6 @@ Informaatiomallien laadunvarmistus ja hyväksyminen tapahtuvat seuraavan prosess
 
 |*Tarkastuskohde*|*Tarkastaja*|*Tarkastustapa*|Hyväksymiskriteerit|
 |----------------|------------|---------------|-------------------|
-Tekninen laatu|Tietoomallikoordinaattori|Solibri Model Checker|Ei törmäyksiä, nimeäminen standardin mukainen|
+Tekninen laatu|Tietomallikoordinaattori|Solibri Model Checker|Ei törmäyksiä, nimeäminen standardin mukainen|
 Informaatiosisältö|Pääsuunnittelija|Informaatiosisällön tarkistuslista|Vaaditut tiedot löytyvät, riittävä tarkkuus|
 Toiminnallisuus|Tilaaja|Käyttötapausten testaus|Malli vastaa toiminnallisia vaatimuksia|
