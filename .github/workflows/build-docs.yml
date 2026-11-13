@@ -82,7 +82,7 @@ jobs:
             cp /git/figures/logo/* ./
             python /docbuild/make-pdf.py /git/staging/main.md /git/artefact/RYTV-tilaajaohje.pdf
             pandoc --template=/git/templates/github-pages.html --toc --number-sections -o /git/gh-pages/index.html /git/staging/main.md
-            cp /git/templates/styles.css /git/gh-pages/styles.css
+            cp /git/templates/rytv.css /git/gh-pages/rytv.css
             cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -116,6 +116,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build-documentation
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
