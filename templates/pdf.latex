@@ -1,0 +1,164 @@
+$-- RYTV PDF template for Pandoc 3 (XeLaTeX). It is Pandoc's default LaTeX template
+$-- (pandoc -D latex) with three additions, marked "RYTV": brand fonts and colours,
+$-- running header/footer, and the navy cover page. Everything else is left as Pandoc ships it,
+$-- so upgrading Pandoc does not break it. Needs the variable `assets` (absolute path of the
+$-- repository, with trailing slash) for fonts and logos; scripts/build-pdf.sh sets it.
+$document-metadata.latex()$
+$passoptions.latex()$
+\documentclass[
+$for(babel-otherlangs)$
+  $babel-otherlangs$,
+$endfor$
+$if(babel-lang)$
+  $babel-lang$,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$if(papersize)$
+  $papersize$paper,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{$documentclass$}
+\usepackage{xcolor}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+\usepackage{amsmath,amssymb}
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+$endif$
+$fonts.latex()$
+$font-settings.latex()$
+$common.latex()$
+
+\usepackage{graphicx}
+\usepackage{colortbl}
+% ---- RYTV: colours ------------------------------------------------------------------------
+\definecolor{rytvnavy}{HTML}{002651}
+\definecolor{rytvblue}{HTML}{1A4687}
+\definecolor{rytvink}{HTML}{2E3A4D}
+\definecolor{rytvmist}{HTML}{BFC9D4}
+\definecolor{rytvhaze}{HTML}{E6E9EE}
+\definecolor{rytvclay}{HTML}{8C3B2E}
+
+% ---- RYTV: fonts (the same families as the web page; files are kept in templates/fonts-pdf) ----
+\newcommand{\assets}{$assets$}
+\setmainfont[Path=\assets templates/fonts-pdf/, Extension=.otf,
+  UprightFont=SourceSans3-Regular, ItalicFont=SourceSans3-It,
+  BoldFont=SourceSans3-Semibold, BoldItalicFont=SourceSans3-SemiboldIt]{SourceSans3-Regular}
+\setsansfont[Path=\assets templates/fonts-pdf/, Extension=.otf,
+  UprightFont=Figtree-Medium, BoldFont=Figtree-Bold]{Figtree-Medium}
+\setmonofont[Path=\assets templates/fonts-pdf/, Extension=.ttf,
+  UprightFont=JetBrainsMono-Regular, BoldFont=JetBrainsMono-Bold, Scale=0.88]{JetBrainsMono-Regular}
+\newfontface{\figtreesemibold}[Path=\assets templates/fonts-pdf/, Extension=.otf]{Figtree-SemiBold}
+\newfontface{\figtreeextrabold}[Path=\assets templates/fonts-pdf/, Extension=.otf]{Figtree-ExtraBold}
+\newfontface{\figtreeregular}[Path=\assets templates/fonts-pdf/, Extension=.otf]{Figtree-Regular}
+
+% ---- RYTV: text, headings, lists, tables, quotes -----------------------------------------------
+\AtBeginDocument{\color{rytvink}}
+\setkomafont{disposition}{\sffamily\bfseries\color{rytvnavy}}
+\setkomafont{section}{\sffamily\bfseries\color{rytvnavy}\fontsize{20}{24}\selectfont}
+\setkomafont{subsection}{\sffamily\bfseries\color{rytvnavy}\fontsize{14}{18}\selectfont}
+\setkomafont{subsubsection}{\sffamily\bfseries\color{rytvnavy}\fontsize{12}{15}\selectfont}
+\setkomafont{paragraph}{\sffamily\bfseries\color{rytvnavy}\fontsize{10.5}{13}\selectfont}
+\setkomafont{descriptionlabel}{\sffamily\bfseries\color{rytvnavy}}
+\renewcommand*{\sectionformat}{\thesection\enskip}
+\RedeclareSectionCommand[beforeskip=2.2\baselineskip,afterskip=0.8\baselineskip]{section}
+\setkomafont{caption}{\small\color{rytvink}}
+\usepackage{enumitem}
+\setlist{itemsep=0.2em,topsep=0.4em}
+\setlist[itemize,1]{label={\raisebox{0.12ex}{\scalebox{0.7}{\textbullet}}},leftmargin=1.4em}
+\setlist[description]{style=nextline,leftmargin=1.2em,font=\sffamily\bfseries\color{rytvnavy}}
+\usepackage{framed}
+\renewenvironment{quote}{%
+  \def\FrameCommand{{\color{rytvmist}\vrule width 3pt}\hspace{0.9em}}%
+  \MakeFramed{\advance\hsize-\width \FrameRestore}\itshape}{\endMakeFramed}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small\arrayrulecolor{rytvmist}}
+\setlength{\heavyrulewidth}{0.8pt}
+\setlength{\lightrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em plus 0.15em}
+\usepackage{microtype}
+\raggedbottom
+
+% ---- RYTV: running header and footer (not on the cover) -----------------------------------------
+\usepackage[headsepline=false,footsepline=false]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{\includegraphics[height=6mm]{\assets figures/logo/bsf-navy.pdf}}
+\ofoot{\figtreesemibold\small\color{rytvink}\pagemark}
+\ifoot{\figtreeregular\small\color{rytvink}$for(author)$$author$$sep$, $endfor$}
+\pagestyle{scrheadings}
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+$after-header-includes.latex()$
+$hypersetup.latex()$
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+\usepackage{afterpage}
+\usepackage{pagecolor}
+
+\begin{document}
+$if(title)$
+% ---- RYTV: navy cover page --------------------------------------------------------------------
+\begingroup
+\pagecolor{rytvnavy}\color{white}
+\thispagestyle{empty}
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\vspace*{-4mm}
+\includegraphics[width=62mm]{\assets figures/logo/bsf-white.pdf}
+
+\vspace*{58mm}
+{\figtreeextrabold\fontsize{34}{40}\selectfont $title$\par}
+$if(subtitle)$
+\vspace{8mm}
+{\figtreeregular\fontsize{16}{22}\selectfont\color{rytvmist} $subtitle$\par}
+$endif$
+\vfill
+{\figtreeregular\small\color{rytvmist}
+$if(version)$$version$\par$endif$
+$for(author)$$author$$sep$, $endfor$\par}
+\afterpage{\nopagecolor}
+\clearpage
+\endgroup
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+{
+$if(colorlinks)$
+$if(toccolor)$
+\hypersetup{linkcolor=$toccolor$}
+$endif$
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+\clearpage
+$endif$
+$if(linestretch)$
+\setstretch{$linestretch$}
+$endif$
+$body$
+
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
