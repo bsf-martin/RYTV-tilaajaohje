@@ -88,6 +88,8 @@ jobs:
             cp /git/templates/rytv.css /git/gh-pages/rytv.css
             cp -r /git/templates/fonts /git/gh-pages/fonts
             cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
+            # make-pdf.py ignores pandoc's exit code, so fail the build explicitly if no PDF was produced
+            test -s /git/artefact/RYTV-tilaajaohje.pdf || { echo "ERROR: PDF was not produced (see LaTeX error above)"; exit 1; }
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
