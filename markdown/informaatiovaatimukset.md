@@ -76,7 +76,7 @@ Projektin informaatiovaatimukset määrittelevät tarkemmin, mitä informaatioa 
 
 Informaation tarkkuuden ja yksityiskohtaisuuden määritelmä
 
-- Geometrinen tarkkkuus
+- Geometrinen tarkkuus
 - Informaatiosisällön laajuus
 - Dokumentit
 
