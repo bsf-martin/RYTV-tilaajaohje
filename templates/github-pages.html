@@ -62,11 +62,17 @@ $endif$
 $body$
       </div>
     </main>
+  </div>
 
     <footer class="site-footer">
       buildingSMART Finland · RYTV · <a href="https://github.com/buildingSMART-Finland/RYTV-tilaajaohje">GitHub</a>
+$if(build-date)$
+      · Rakennettu $build-date$
+$endif$
+$if(build-sha)$
+      · <a href="$repo-url$/commit/$build-sha-full$">$build-sha$</a>
+$endif$
     </footer>
-  </div>
 
   <script>
   (function () {
@@ -239,11 +245,13 @@ $body$
       });
       var heads = Array.prototype.filter.call(content.querySelectorAll('h1[id],h2[id],h3[id]'), function (h) { return links[h.id]; });
       // Active section = last heading whose top has passed a line just below the header
+      // (130px: level-1 headings land ~120px from the top after a jump, because of the page card padding)
       var update = function () {
         var best = null;
         for (var i = 0; i < heads.length; i++) {
-          if (heads[i].getBoundingClientRect().top <= 104) best = heads[i]; else break;
+          if (heads[i].getBoundingClientRect().top <= 130) best = heads[i]; else break;
         }
+        if (heads.length && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) best = heads[heads.length - 1];
         if (best) setCurrent(links[best.id]);
       };
       var ticking = false;

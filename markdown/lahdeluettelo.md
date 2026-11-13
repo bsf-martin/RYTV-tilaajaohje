@@ -1,3 +1,6 @@
+
+# Lähdeluettelo {.unnumbered}
+
 Ohje perustuu seuraaviin standardeihin ja viiteasiakirjoihin:
 
 **SFS-EN ISO 19650-1:2019** Rakennuksia ja infrarakenteita koskevien tietojen organisointi ja digitalisointi, mukaan lukien rakennetun ympäristön tietojen mallintaminen ja hallinta hyödyntämällä rakennettujen kohteiden tietomallinnusta (BIM). Osa 1: Käsitteet ja periaatteet
