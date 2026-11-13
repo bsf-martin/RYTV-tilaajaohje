@@ -83,6 +83,7 @@ jobs:
             python /docbuild/make-pdf.py /git/staging/main.md /git/artefact/RYTV-tilaajaohje.pdf
             pandoc --template=/git/templates/github-pages.html --toc --number-sections -o /git/gh-pages/index.html /git/staging/main.md
             cp /git/templates/rytv.css /git/gh-pages/rytv.css
+            cp -r /git/templates/fonts /git/gh-pages/fonts
             cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
       - name: Setup Pages
         uses: actions/configure-pages@v5
