@@ -577,5 +577,10 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
   .layout { display: block; padding-top: 0; }
   body { background: #fff; }
   .page { box-shadow: none; padding: 0; margin-bottom: var(--sp-8); }
+  .site-footer { margin-left: 0; }
+  /* Keep headings with their text and rows/entries whole across printed pages */
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  tr, dt, dd, blockquote, pre, img { break-inside: avoid; }
+  thead { display: table-header-group; }
   .table-wrap { overflow: visible; }
 }
