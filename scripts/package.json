@@ -1,0 +1,12 @@
+{
+  "name": "rytv-tilaajaohje-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Build helpers for the RYTV tilaajaohje (PDF from the styled HTML page)",
+  "dependencies": {
+    "puppeteer-core": "25.17.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

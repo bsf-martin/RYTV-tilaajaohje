@@ -572,10 +572,97 @@ caption { padding: 0 0 var(--sp-3); text-align: left; color: var(--c-blue); font
 }
 
 /* ---- Print ---- */
+/* ---- Print / PDF ----
+ * The PDF artefact is made by printing this page with headless Chrome (scripts/build-pdf.mjs),
+ * so these rules are the PDF design: navy cover, contents page, running logo, page numbers.
+ * (Custom properties are not available inside @page, so colours are literal here.) */
+.cover-logo, .print-toc { display: none; }
+
+@page {
+  size: A4;
+  margin: 24mm 20mm 24mm;
+  @top-left {
+    content: url("figures/logo/bsf-navy.svg");   /* 36 x 6.5 mm, set in the SVG */
+  }
+  @bottom-right {
+    content: counter(page);
+    font: 600 9pt "Figtree", sans-serif;
+    color: #2E3A4D;
+  }
+}
+@page :first {
+  margin: 0;   /* full-bleed cover; with no margin the running logo and page number have no room */
+}
+
 @media print {
-  .site-header, .toc, .skip-link, .anchor { display: none !important; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #fff; font-size: 10.5pt; line-height: 1.5; }
+  .site-header, .toc, .skip-link, .anchor, .toc-toggle { display: none !important; }
   .layout { display: block; padding-top: 0; }
-  body { background: #fff; }
-  .page { box-shadow: none; padding: 0; margin-bottom: var(--sp-8); }
+  main { padding: 0; }
+  .content { max-width: none; margin: 0; }
   .table-wrap { overflow: visible; }
+
+  /* Every level-1 section starts on a new page (the cover is the first page) */
+  .page {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    break-before: page;
+  }
+
+  /* Cover */
+  .page.cover {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 210mm;
+    height: 296mm;
+    overflow: hidden;
+    padding: 26mm 22mm 24mm;
+    background: #002651;
+    color: #fff;
+    break-after: page;
+  }
+  .page.cover .cover-logo { display: block; order: 0; width: 62mm; height: auto; margin-bottom: auto; }
+  .page.cover h1.doc-title { order: 1; color: #fff; font-size: 36pt; line-height: 1.1; margin: 0 0 6mm; hyphens: manual; }
+  .page.cover .doc-subtitle { order: 2; color: #BFC9D4; font-size: 16pt; margin: 0 0 20mm; }
+  .page.cover .draft-notice { order: 3; margin: 0; }
+
+  /* Contents page (cloned from the sidebar TOC by the page script) */
+  .print-toc { display: block; }
+  .print-toc ul { list-style: none; margin: 0; padding: 0; }
+  .print-toc ul ul { padding-left: 6mm; }
+  .print-toc ul > li::before { display: none; }
+  .print-toc li { margin: 0; line-height: 1.35; }
+  .print-toc > ul > li { margin-top: 2.4mm; }
+  .print-toc a { color: #2E3A4D; text-decoration: none; font-size: 9.5pt; }
+  .print-toc > ul > li > a { color: #002651; font: 700 10.5pt "Figtree", sans-serif; }
+
+  /* Typography */
+  .content h1 { font-size: 24pt; margin-bottom: 7mm; }
+  .content h2 { font-size: 17pt; margin-top: 9mm; }
+  .content h3 { font-size: 13.5pt; margin-top: 7mm; }
+  .content h4 { font-size: 11.5pt; }
+  p, li, dd { orphans: 3; widows: 3; }
+  table { font-size: 9pt; }
+  th { font-size: 8.5pt; }
+
+  /* Keep headings with their text, entries and rows whole, repeat table headers */
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  tr, dt, dd, blockquote, pre, img { break-inside: avoid; }
+  thead { display: table-header-group; }
+
+  /* Build info at the end of the document */
+  .site-footer {
+    margin: 10mm 0 0;
+    padding: 4mm 0 0;
+    background: none;
+    border-top: 0.5pt solid #BFC9D4;
+    color: #2E3A4D;
+    font-size: 8pt;
+  }
+  .site-footer a { color: #1A4687; }
 }

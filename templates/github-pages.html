@@ -49,6 +49,7 @@ $if(toc)$
 $endif$
     <main id="main">
       <div class="content">
+        <img class="cover-logo" src="figures/logo/bsf-white.svg" alt="" width="266" height="48">
 $if(version)$
         <div class="draft-notice" role="note">
           <strong>Tämä asiakirja ei ole julkaistu versio.</strong><br>
@@ -88,6 +89,23 @@ $endif$
       }
       page.appendChild(el);
     });
+
+    // Print only: the first page is the cover, followed by a contents page cloned from the sidebar TOC
+    var tocNav = document.getElementById('toc');
+    var cover = content.querySelector('.page');
+    if (cover) cover.classList.add('cover');
+    if (tocNav && cover && tocNav.querySelector('ul')) {
+      var tp = document.createElement('section');
+      tp.className = 'page print-toc';
+      var tt = document.createElement('h1');
+      tt.className = 'print-toc-title';
+      tt.textContent = 'Sisällys';
+      var tl = tocNav.querySelector('ul').cloneNode(true);
+      tl.querySelectorAll('[id]').forEach(function (n) { n.removeAttribute('id'); });
+      tp.appendChild(tt);
+      tp.appendChild(tl);
+      content.insertBefore(tp, cover.nextSibling);
+    }
 
     // Wrap tables so wide ones scroll instead of breaking the layout
     content.querySelectorAll('table').forEach(function (t) {

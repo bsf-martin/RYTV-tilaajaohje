@@ -80,16 +80,22 @@ jobs:
           run: |  
             echo "Prosessing intermediate markdown ..."
             python /docbuild/moustache_handler.py /git/markdown/main.md /git/staging/main.md /Draft /Draft
-            echo "Build main pdf document"
             ln -s /git/figures/ /git/staging/figures
-            cp /git/figures/logo/* ./
-            python /docbuild/make-pdf.py /git/staging/main.md /git/artefact/RYTV-tilaajaohje.pdf
             pandoc --template=/git/templates/github-pages.html --toc --number-sections -M build-date="$(date -u +%Y-%m-%d)" -M build-sha=${{ steps.vars.outputs.short }} -M build-sha-full=${{ github.sha }} -M repo-url=https://github.com/${{ github.repository }} -o /git/gh-pages/index.html /git/staging/main.md
             cp /git/templates/rytv.css /git/gh-pages/rytv.css
             cp -r /git/templates/fonts /git/gh-pages/fonts
             cp /git/figures/logo/favicon.ico /git/gh-pages/favicon.ico
-            # make-pdf.py ignores pandoc's exit code, so fail the build explicitly if no PDF was produced
-            test -s /git/artefact/RYTV-tilaajaohje.pdf || { echo "ERROR: PDF was not produced (see LaTeX error above)"; exit 1; }
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build PDF (headless Chrome prints the styled page)
+        working-directory: main/scripts
+        run: |
+          google-chrome --version
+          npm ci --no-audit --no-fund
+          node build-pdf.mjs ../gh-pages/index.html ../artefact/RYTV-tilaajaohje.pdf
+          test -s ../artefact/RYTV-tilaajaohje.pdf || { echo "ERROR: PDF was not produced"; exit 1; }
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
