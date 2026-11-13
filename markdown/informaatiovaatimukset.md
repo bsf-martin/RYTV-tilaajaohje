@@ -52,7 +52,7 @@ Projektin informaatiovaatimukset määrittelevät tarkemmin, mitä informaatioa 
 
 ### Keskeiset kysymykset - Key questions
 
-### Lähtötiedot ja resusrssit
+### Lähtötiedot ja resurssit
 
 ## Vaatimustaulukko
 
