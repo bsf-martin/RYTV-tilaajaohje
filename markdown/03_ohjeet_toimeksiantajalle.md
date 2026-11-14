@@ -303,7 +303,7 @@ Toimeksisaaja tietää tarkalleen, mitä informaatiota (geometria, aakkosnumeeri
 
 Informaationvaihdon vaatimukset (EIR) toimii tarjouspyynnön keskeisenä liitteenä. Tarjoajan tulee vastata siihen laatimalla informaatiomallinnuksen toteutussuunnitelma (BEP), jolla osoitetaan, miten vaatimukset täytetään.
 
-![](data:image/x-emf;base64...)
+> **KUVA 8**
 
 Kuva 8: Informaation vaihdon vaatimukset (EIR)
 
@@ -341,7 +341,7 @@ Käyttötarkoituksesta kuvataan
 
 Esimerkki taulukkomuotoisesta EIR-määrittelystä (liite 2):
 
-![](data:image/x-emf;base64...)
+> **KUVA 9**
 
 Kuva 9: Esimerkki taulukkomuotoisesta EIR-määrittelystä
 
@@ -380,7 +380,7 @@ Tavoitetilassa informaatiotarpeet perustuvat kansallisesti vakioituihin profiile
 * Tietosisältöjen määrittely on yhdenmukaista, eikä niitä tarvitse määritellä hankekohtaisesti alusta alkaen
 * Laadunvarmistus ja prosesseja voidaan automatisoida
 
-![](data:image/x-emf;base64...)
+> **KUVA 10**
 
 Kuva 10: Informaatiotarpeista muodostuu kokonaisuus.
 
@@ -419,7 +419,7 @@ Tavoite: Tuottaa fotorealistisia kuvia asuntojen myyntiä varten.
   + Aakkosnumeerinen informaatio: Ei kriittistä (minimitaso riittää; visuaalisuus ratkaisee).
   + Dokumentit: sisustussuunnitelmat
 
-![](data:image/x-emf;base64...)
+> **KUVA 11**
 
 Kuva 11: Esimerkki: Käyttötapaus ohjaa oven tietosisältöä (LoIN)
 
@@ -757,7 +757,7 @@ Taulukko 13: Periaatekuva EIR ja BEP vastaavuudesta.
 
 Yhteinen tietoympäristö (Common Data Environment, CDE) on yksi tai useampi järjestelmä, joiden avulla voidaan vaihtaa informaatiota, hallita tehtäviä ja käsitellä informaatiota sovittujen käyttötarkoitusten mukaisesti. Se on keskeinen edellytys tehokkaalle informaationvaihdolle ja yhteistyölle. Tilaajan on huolehdittava yhteisen tietoympäristön määrittämisestä. Tilaajan tulisi perustaa CDE jo projektin alussa, jotta kaikki osapuolet voivat työskennellä samassa ympäristössä koko projektin ajan. Samaa tietoympäristöä on suositeltavaa käyttää projektista toiseen, jotta tiedonhallinta voidaan toteuttaa ja seurata yhdenmukaisesti. Yhteinen tietoympäristö ei rajoitu projektin toteutusvaiheeseen, vaan kattaa tiedonhallinnan omaisuuskohteen koko elinkaaren ajan. Toiminnallisuusvaatimukset poikkeavat toisistaan toteutus- ja ylläpitovaiheessa ja saattavat edellyttää erilaisia ratkaisuja. Informaation saumaton siirtyminen projektivaiheesta ylläpitoon tulee varmistaa.
 
-![](data:image/x-emf;base64...)
+> **KUVA 12**
 
 Kuva 12: Yhteisen tietoympäristön (CDE) ratkaisu ja työnkulku
 

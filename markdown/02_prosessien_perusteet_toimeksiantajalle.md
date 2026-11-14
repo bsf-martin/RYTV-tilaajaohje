@@ -8,7 +8,7 @@ Jos tilaajaorganisaatiossa ei vielä käytetä ISO 19650 -standardin mukaista to
 
 ISO 19650 -prosessin mukaisesti organisatoriset informaatiovaatimukset (OIR) toimivat omaisuuskohteen informaatiovaatimusten (AIR) ja projektin informaatiovaatimusten (PIR) lähtökohtana. Näiden ylätason informaatiovaatimusten pohjalta määritellään yksityiskohtaiset informaation vaihdon vaatimukset (EIR). Informaatiotarve (LoIN) täsmentää tarvittavan informaation laajuuden ja tarkkuuden. Yhdessä nämä määrittelevät projektin informaatiomallin (PIM) ja omaisuuskohteen informaatiomallin (AIM) ja sisällön.
 
-![](data:image/x-emf;base64...)
+> **KUVA 5**
 
 Kuva 5: yksinkertaistettu kaavio ISO 19650 mukaisesta informaatiovaatimusten määrittelyprosessista.
 
@@ -18,7 +18,7 @@ Toteutusvaiheen informaation hallintaprosessi kuvaa ISO 19650 mukaisen projektin
 
 Tämä tilaajaohje keskittyy toimeksiantajan vastuulla oleviin tehtäviin ja tarjoaa ohjeet sekä työkalut informaatiovaatimusten (OIR, AIR, PIR) ja informaation vaihdon vaatimusten (EIR) laatimiseen. Nämä sijoittuvat prosessin vaiheisiin Arviointi ja tarve (1) sekä Tarjouspyyntö (2). Prosessin myöhemmät vaiheet ovat toimeksisaajan vastuulla, ja niitä tullaan käsittelemään tulevassa RYTV toimeksisaajaohjeessa.
 
-![](data:image/x-emf;base64...)
+> **KUVA 6**
 
 Kuva 6: Toteutusvaiheen informaation hallintaprosessi ISO 19650-2:2019 mukaisesti
 
@@ -139,7 +139,7 @@ Sopimusprosessi koostuu kolmesta päävaiheesta
 * Tarjous, jossa potentiaaliset vastuulliset toimeksisaajat vastaavat informaation vaihdon vaatimuksiin toimitustiimin (ennen toimeksiantoa tehtävällä) informaatiomallinnuksen toteutussuunnitelmalla (BEP), jossa kuvataan informaation toimituksen lähestymistapa ja periaatteet.
 * Valinnan jälkeen vastuullisen toimeksisaaja vahvistaa oman toimitustiimin informaatiomallinnuksen toteutussuunnitelmansa (BEP).
 
-![](data:image/x-emf;base64...)
+> **KUVA 7**
 
 Kuva 7: Sopimusprosessi
 

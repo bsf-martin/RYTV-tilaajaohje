@@ -112,7 +112,7 @@ Mallipohja informaationvaihdon vaatimuksille (EIR)
 
 Voit hyödyntää määrittelyssä Liitteen 2 taulukkoa
 
-![](data:image/x-emf;base64...)
+> **KUVAKAAPPAUS**
 
 ### Informaatiotarve (LOIN)
 

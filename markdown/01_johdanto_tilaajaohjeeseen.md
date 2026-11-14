@@ -26,7 +26,7 @@ Tämä mahdollistaa tiedon kytkemisen osaksi sopimuksenhallintaa:
 
 Alla oleva kaavio havainnollistaa informaationhallinnan sijoittumista organisaation johtamisjärjestelmään. ISO 19650 -mukainen informaationhallinta on osa laajempaa kokonaisuutta: se kytkeytyy organisaation laatujohtamiseen (ISO 9001), omaisuudenhallintaan (ISO 55000) ja projektinhallintaan (ISO 21500). Käytännössä tämä tarkoittaa, että informaatiovaatimukset palvelevat samoja tavoitteita kuin organisaation muut johtamisjärjestelmät.
 
-![](data:image/x-emf;base64...)
+> **KUVA 2**
 
 Kuva 2: Yleinen projekti-informaation ja omaisuuskohteen informaation hallinnan elinkaari.
 
@@ -54,7 +54,9 @@ Informaation vaihdon vaatimukset (EIR) määrittelevät kokonaisuuden, jossa kuv
 * Mitä — mitä kohteita tarkastellaan ja miten ne jäsennellään.
 * Missä muodossa — geometria, aakkosnumeerinen tieto ja dokumentit.
 
-Informaatiotarve eli LoIN (Level of Information Need) täsmentää: se kuvaa kullekin käyttötarkoitukselle vaaditun tietosisällön ja tarkkuustason. LoIN ei siis määrittele miksi tai mitä tietoa tarvitaan, vaan missä muodossa ja millä tarkkuudella se toimitetaan. ![](data:image/x-emf;base64...)
+Informaatiotarve eli LoIN (Level of Information Need) täsmentää: se kuvaa kullekin käyttötarkoitukselle vaaditun tietosisällön ja tarkkuustason. LoIN ei siis määrittele miksi tai mitä tietoa tarvitaan, vaan missä muodossa ja millä tarkkuudella se toimitetaan. 
+
+> **KUVA 3**
 
 Kuva 3: Informaatiotarpeen (LoIN) periaate ja sen liittyminen käyttötarkoitukseen (EIR).
 
@@ -76,7 +78,7 @@ Vaatimukset tarkentuvat neljällä tasolla:
 
 Alla oleva kaavio kuvaa, miten informaatiovaatimukset määritellään vaiheittain ja kuka niistä vastaa. Prosessi etenee organisaation strategisista tavoitteista (OIR) omaisuuskohteen vaatimusten (AIR) kautta hankekohtaisiin vaatimuksiin (PIR) ja lopulta sopimuksellisiin informaation vaihdon vaatimuksiin (EIR).
 
-![](data:image/x-emf;base64...)
+> **KUVA 4**
 
 Kuva 4: Prosessikaavio tilaajan informaatiovaatimusten määrittämiseksi
 
