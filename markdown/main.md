@@ -16,33 +16,16 @@ lang: fi
 
 \newpage
 
-{{include johdanto.md}}
+{{include 01_johdanto_tilaajaohjeeseen.md}}
 
 \newpage
 
-{{include informaatiovaatimukset.md}}
+{{include 02_prosessien_perusteet_toimeksiantajalle.md}}
 
 \newpage
 
-{{include vaatimuksettarjoajallejahankintaprosessinkuvaus.md}}
+{{include 03_ohjeet_toimeksiantajalle.md}}
 
 \newpage
 
-{{include laadunvarmistusjahyvaksymiskriteerit.md}}
-
-\newpage
-
-{{include lahtotiedotjaresurssit.md}}
-
-\newpage
-
-{{include tiedonhallintaprosessitjatoimitusaikataulut.md}}
-
-\newpage
-
-{{include mimeamiskaytannotjametatiedot.md}}
-
-\newpage
-
-{{include liitteet.md}}
-
+{{include 04_vaatimusmaarittelyiden_mallipohjat.md}}
