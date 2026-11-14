@@ -767,9 +767,8 @@ Kuva 12: Yhteisen tietoympäristön (CDE) ratkaisu ja työnkulku
 
 Ratkaisut jaetaan kahteen ryhmään: toimeksiantajan vastuulla oleviin ratkaisuihin, jotka muodostavat projektin yhteisen työskentely-ympäristön, sekä toimeksisaajan vastuulla oleviin ratkaisuihin, joita käytetään informaation tuottamiseen ja tarkastamiseen.
 
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
 | Ratkaisun käyttötarkoitus | Ratkaisusta vastaava osapuoli | Ohjelmisto | | Käytettävä laitteisto | Kustannusvastuu |
+| --- | --- | --- | --- | --- | --- |
 | **Toimeksiantajan vastuulla olevat ratkaisut** | | | | | |
 | Tietomallienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  |  |
 | Dokumenttienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  | Toimeksiantaja |
@@ -830,9 +829,8 @@ Informaatiokoosteiden (tiedostojen, mallien ja dokumenttien) status muuttuu vaih
 
 Alla olevaa listaa voidaan käyttää pohjana.
 
-|  |  |
-| --- | --- |
 | Yhteisen tietoympäristön tarkistuslista | |
+| --- | --- |
 | Saatavuus ja käyttäjäoikeudet | |
 |  | Mahdollisuus hallita käyttäjiä sekä myöntää ja peruuttaa käyttöoikeuksia |
 |  | Mahdollisuus hallita, kenellä on pääsy tiettyihin tietoihin, tiedostoihin ja aineistoihin |

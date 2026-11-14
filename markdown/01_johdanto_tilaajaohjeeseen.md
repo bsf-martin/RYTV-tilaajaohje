@@ -90,9 +90,8 @@ Esimerkissä on kuvattu, kuinka hiilineutraaliustavoite puretaan eri tasoille. J
 
 Vaiheittainen rakenne varmistaa, että strateginen tavoite ei jää abstraktiksi, vaan muuttuu mitattavaksi ja ohjattavaksi osaksi hankkeen tiedonhallintaa.
 
-|  |  |  |
-| --- | --- | --- |
 | Taso | Vaatimus | Esimerkki |
+| --- | --- | --- |
 | 1. Organisatoriset informaatiovaatimukset (OIR) | Vähentää katu- ja aluerakentamisen elinkaaren CO₂-päästöjä kaupunkitasolla.  Tavoite: −40 % vuoteen 2035 mennessä (vertailuvuosi 2023) ja hiilibudjetti per hanke. | Kaupungin strategiassa asetetaan hiilibudjetti. Raportointi vuosittain (toteuma vs. tavoite) ja ohjelmatason hiilibudjetin seuranta. |
 | 2. Omaisuuskohteen informaatiovaatimukset (AIR) | Hiilijalanjäljen seuranta oltava mahdollista koko omaisuuskohteen elinkaaren ajan. | Valmiin kohteen tiedoissa jokaisella rakennekerroksella on EPD-viite ja CO₂-arvot. |
 | 3. Projektin informaatiovaatimukset (PIR) | Määritettävä hiilijalanjälkitiedot, joita tarvitaan suunnittelun ja rakentamisen aikana, jotta hiilijalanjälkitavoitteen saavuttamista voidaan mitata ja hanke voidaan ohjata tavoitteisiin. | Kullekin rakenneosalle on määritelty CO₂ per yksikkö sekä kuljetusetäisyys ja toteutustapa. Informaatiomallista tuotettu raportti näyttää CO₂-toteuman vs. hiilibudjetti. |
