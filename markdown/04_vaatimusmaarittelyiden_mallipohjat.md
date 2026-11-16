@@ -26,9 +26,8 @@ Mallipohja projektin informaatiovaatimuksille (PIR)
 
 Määrittelyssä voit hyödyntää liitteenä 1 olevaa informaation hallinnan vastuunjakotaulukkoa.
 
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
 | ID | Selite:  R: Vastuussa toimenpiteiden suorittamisesta (responsible)  A: Vastuussa toimenpiteiden valmistumisesta (accountable)  C: Konsultointi toimenpiteiden aikana (consulted)  I: Informointi toimenpiteiden valmistumisen jälkeen (informed)  Tehtävä | Toimeksiantaja | Kolmas osapuoli | Vastaava toimeksisaaja | Toimeksisaaja |
+| --- | --- | --- | --- | --- | --- |
 | Arviointi ja tarve | |  |  |  |  |
 | 3.2.3.2 | Nimeä informaation hallinnan vastuuhenkilöt |  |  |  |  |
 | 3.2.3.3 | Aseta projektin informaatiovaatimukset |  |  |  |  |
@@ -122,9 +121,8 @@ Informaatiotarve (LoIN, Level of Information Need) kuvaa käyttötarkoituksessa 
 
 Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
-|  |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Edellytykset | | | | | | Informaatiotarve - LOIN | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Miksi | Koska | Kuka | | Mitä | | Missä muodossa | | |
 | Tarkoitus | Päätöksentekopiste | Toimija (Informaation vastaanottaja) | Toimija (Informaation tuottaja) | Kohde | Jäsentely |
 |  |  |  |  |  |  | Geometria | Yksityiskohtaisuus |  |
@@ -148,9 +146,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** määrittele noudatettavat standardit ja käytännöt
 
-|  |  |  |
-| --- | --- | --- |
 | Käyttötarkoitus | Standardi / käytäntö | Kuvaus |
+| --- | --- | --- |
 | Informaation hallinta | ISO 19650 standardisarja | Rakennuksia ja infrarakenteita koskevien tietojen organisointi ja digitalisointi, mukaan lukien rakennetun ympäristön tietojen mallintaminen ja hallinta hyödyntämällä rakennettujen kohteiden tietomallinnusta |
 | Informaatiotarpeen (LOIN) määrittelytapa | ISO 7817-1:2024 | Building information modelling — Level of information need - Part 1: Concepts and principles |
 | Käyttötapauskuvauksien laatiminen | ISO 29481-1:2025 | Building information models — Information delivery manual Part 1: Methodology and format |
@@ -163,9 +160,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** Määrittele käytettävät nimikkeistöt, koodistot ja luokittelujärjestelmät.
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Käyttötarkoitus | Versio | Nimikkeistö tai koodisto | Kuvaus |
+| --- | --- | --- | --- |
 | [Nimikkeistön tai koodiston käyttötarkoitus] |  | [viittaus nimikkeistöön tai koodistoon] | [kuvaus nimikkeistöstä tai koodistosta] |
 |  |  |  |  |
 
@@ -173,9 +169,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** määrittele käytettävät tiedostomuodot.
 
-|  |  |  |
-| --- | --- | --- |
 | Käyttötarkoitus | Tiedostomuoto ja versio | Kuvaus |
+| --- | --- | --- |
 | [Tiedostomuodon käyttötarkoitus] | [Tiedostomuoto ja versio] | [kuvaus tiedostomuodosta] |
 |  |  |  |
 
@@ -209,18 +204,16 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** Määritele omaisuuskohteen olemassa oleva informaatio sekä sen sisältö, laatu ja sijainti (esim. tietomallit, piirustukset ja dokumentit)
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Informaatio | Sisällön kuvaus | Sijainti | Tarkkuustaso ja ajantasaisuus | Puutteet tai rajoitteet |
+| --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
 #### Jaetut resurssit
 
 **Ohje:** Määrittele projektissa käytettävät jaetut resurssit sekä niiden käyttöperiaatteet (esim. asiakirjamallit, tyyli- ja objektikirjastot).
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Resurssi | Kuvaus | Sijainti | Käyttöperiaatteet |
+| --- | --- | --- | --- |
 | Asiakirjamallit | Projektissa käytettävät raportti-, piirustus- ja luovutusaineiston mallipohjat | Projektipankki / CDE (linkki) | Käytettävä kaikissa toimituksissa. Mallipohjia ei saa muuttaa ilman hyväksyntää |
 | Tyylikirjastot | Piirustusten ja tietomallien tyylikirjastot | Projektipankki / suunnitteluympäristö | Käytettävä yhdenmukaisesti kaikilla suunnittelualoilla |
 | Objektikirjastot | Mallinnuksessa käytettävät vakioidut objektit ja rakennusosat | Mallipalvelin / CDE | Käytettävä ensisijaisesti. Poikkeamat sovittava erikseen |
@@ -229,9 +222,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** Määrittele projektissa käytettävät kansalliset kirjastot ja varmista niiden yhteensopivuus projektin vaatimusten kanssa.
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Kirjastot | Kuvaus | Käyttötarkoitus | Sijainti | Käyttöperiaate |
+| --- | --- | --- | --- | --- |
 | IDS-tarkastussäännöt (esim. RAVA3X5) | Rakentamisluvan vaatimustenmukaisuuden tarkastamiseen käytettävät koneluettavat säännöt | Tietomallien automaattinen tarkastus ja vaatimustenmukaisuuden todentaminen | Rava3pro.fi / projektipankki | Käytettävä sovituissa tarkastuksissa ennen toimitusta |
 | bSDD-koodistot | Rakennusosien ja ominaisuustietojen standardoidut määrittelyt | Tietosisällön yhdenmukaistaminen ja koneluettavuus | https://search.bsdd.buildingsmart.org | Käytettävä ominaisuustietojen määrittelyssä |
 | Kansalliset nimikkeistöt ja koodistot | Tunnisteet ja nimeämiskäytännöt (esim. tuoteosat, järjestelmät) | Tiedon tunnistaminen ja yhteensopivuus järjestelmien välillä | URI-palvelut / dokumentaatio | Käytettävä tiedon nimeämisessä ja luokittelussa |
@@ -258,9 +250,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje**: Informaatiomallinnuksen toteutussuunnitelma (BEP) on toimitustiimin laatima kuvaus siitä, miten informaation vaihdon vaatimukset (EIR) toteutetaan projektissa.
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Informaation vaihdon vaatimukset EIR | | Toimitustiimin (ennen toimeksiantoa tehtävä) informaatiomallinnuksen toteutussuunnitelma (BEP) | | |
+| --- | --- | --- | --- | --- |
 | Toimeksiantajan vaatimus | | Vastuullisen toimeksisaajan vastaus | | |
 | EIR viite | EIR kuvaus - Miksi | EIR viite | Toimitustiimin vastaus informaation vaihdon vaatimukseen | Toimitustiimin tavoitteet informaation toimitukselle |
 | [EIR viite] | [EIR nimi]  Tarkoitus: [tarkoituksen kuvaus ja PIR / AIR-viittaus]  PIR/AIR viite: [viittaus PIR/AIR vaatimukseen]  Vaatimukset: [Vaatimuksen kuvaus] | [EIR viite] | [viittaus/kuvaus] |  |
@@ -273,9 +264,8 @@ Voit hyödyntää määrittelyssä Liitteen 3 taulukkoa
 
 **Ohje:** Määritä projektissa käytettävän yhteisen tietoympäristön tarkistuslista, jolla varmistetaan, että ympäristö vastaa parhaita käytäntöjä ja standardeja ja että informaationhallinta, viestintä ja tietoturva toimivat tehokkaasti koko projektin elinkaaren ajan.
 
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
 | Ratkaisun käyttötarkoitus | Ratkaisusta vastaava osapuoli | Ohjelmisto | | Käytettävä laitteisto | Kustannusvastuu |
+| --- | --- | --- | --- | --- | --- |
 | Toimeksiantajan vastuulla olevat ratkaisut | | | | | |
 | Tietomallienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  |  |
 | Dokumenttienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  | Toimeksiantaja |
@@ -332,9 +322,8 @@ Informaatiokoosteiden (tiedostojen, mallien ja dokumenttien) status muuttuu vaih
 
 **Ohje:** Määritä projektikohtainen tarkistuslista, jolla varmistetaan, että käyttöön otettu yhteinen tietoympäristö vastaa parhaita käytäntöjä ja standardeja ja että informaationhallinta, viestintä ja tietoturva toimivat tehokkaasti koko projektin elinkaaren ajan.
 
-|  |  |
-| --- | --- |
 | Yhteisen tietoympäristön tarkistuslista | |
+| --- | --- |
 | Saatavuus ja käyttäjäoikeudet | |
 |  | Mahdollisuus hallita käyttäjiä sekä myöntää ja peruuttaa käyttöoikeuksia |
 |  | Mahdollisuus hallita, kenellä on pääsy tiettyihin tietoihin, tiedostoihin ja aineistoihin |
