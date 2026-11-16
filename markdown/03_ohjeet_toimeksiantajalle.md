@@ -50,9 +50,8 @@ Vaatimukset voivat syntyä esimerkiksi:
 
 Esimerkkejä OIR-vaatimuksista, infra- ja talokohteissa
 
-|  |  |  |
-| --- | --- | --- |
 | Tavoite | Vaatimus | Esimerkki |
+| --- | --- | --- |
 | Vähentää katu- ja aluerakentamisen elinkaaren CO₂-päästöjä kaupunkitasolla. | Määritä, että hankkeista kerätään yhtenäiset hiilijalanjälkeä kuvaavat informaatiot ja niitä verrataan asetettuihin tavoitteisiin | Organisaatio seuraa vuosittain hankekohtaista CO₂-toteumaa suhteessa hiilibudjettiin |
 | Mahdollistaa rakennusportfolion talouden ja hankintojen seuranta | Määritä, että hankkeista kerätään yhtenäiset kustannus- ja aikatauluinformaatiot organisaation järjestelmiin | Organisaatio seuraa kvartaaleittain projektien kustannustoteumaa ja hankintojen läpimenoaikoja |
 
@@ -86,9 +85,8 @@ Vaatimukset voivat koskea esimerkiksi:
 
 Esimerkkejä AIR-vaatimuksista, infra- ja talokohteissa
 
-|  |  |  |
-| --- | --- | --- |
 | AIR-tunnus | Tavoite | Vaatimus |
+| --- | --- | --- |
 | AIR-01 | mahdollistaa hiilijalanjäljen seuranta käytön aikana | Omaisuuskohteen rakenteista ylläpidetään hiilijalanjälkeä kuvaava informaatio, jota voidaan hyödyntää elinkaaren aikaisessa seurannassa ja raportoinnissa |
 | AIR-02 | Varmistaa ylläpitotiedon käytettävyys järjestelmissä | Jokaiselle ovelle on määritetty valmistaja, tuotemalli ja huolto-ohje, ja tieto siirretään ylläpitojärjestelmään |
 
@@ -188,9 +186,8 @@ Esimerkkisisältö:
 
 Esimerkkiteemat ja tavoitteet:
 
-|  |  |  |
-| --- | --- | --- |
 | PIR-tunnus | Käyttötarkoitus | Tavoite |
+| --- | --- | --- |
 | PIR-01 | Strategiset tavoitteet ja liiketoiminnan tuki | Varmistaa, että hanke tukee tilaajan strategisia tavoitteita ja liiketoimintaa sekä että tavoitteiden toteutumista voidaan arvioida päätöksenteon tueksi. |
 | PIR-02 | Käyttöarvo ja toiminnallisuus | Varmistaa, että tilat ja ympäristö täyttävät käyttäjien toiminnalliset vaatimukset ja tukevat suunniteltua käyttöä. |
 | PIR-03 | Työ- ja käyttöturvallisuus | Varmistaa, että suunnitteluratkaisut mahdollistavat turvallisen toteutuksen ja käytön sekä että keskeiset turvallisuusriskit voidaan tunnistaa ja hallita ennen toteutusta. |
@@ -240,9 +237,8 @@ Keskeiset kysymykset:
 
 Esimerkkisisältö taulukkomuodossa:
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Päätöksentekopiste | Tehtävä päätös | Vaadittava informaatio | Keskeiset kysymykset |
+| --- | --- | --- | --- |
 | **1. Hankepäätös** | Hyväksytään hankesuunnitelma. | Tilamalli ja tilaohjelma (käyttötarkoitus: laajuuden arviointi)  Alustava kustannusmalli (käyttötarkoitus: kustannusohjaus)  Tontinkäytön ja massoittelun tarkastelut (käyttötarkoitus: toteutettavuuden arviointi) | Täyttääkö ratkaisu laajuus ja kustannustavoitteet?  Onko ratkaisu toteutettavissa reunaehtojen mukaisesti? |
 | **2. Investointipäätös** | Hyväksytään yleissuunnitelmat. Lukitaan hankkeen laajuus ja laatutaso. | Yleissuunnitelmamalli (käyttötarkoitus: ratkaisun arviointi ja päätöksenteko)  Kustannusmallin tarkennus (käyttötarkoitus: investointipäätös)  Energia- ja olosuhdesimuloinnit (käyttötarkoitus: suorituskyvyn arviointi)  Hiilijalanjälkilaskelma (käyttötarkoitus: kestävyyden arviointi) | Puoltavatko simulaatiot ja hiilijalanjälkilaskelma asetettujen tavoitteiden saavuttamista?  Täyttääkö suunnitelmat rakentamisluvan myöntämisen edellytykset? |
 | **3. Rakentamispäätös** | Hyväksytään toteutussuunnitelmat. Valitaan urakoitsijat ja päätetään aloittaa rakentaminen. | Yhdistelmämalli (käyttötarkoitus: yhteensovitus ja laadunvarmistus)  Risteilytarkastelut (käyttötarkoitus: virheiden tunnistaminen)  Määrälaskentamalli ja määräluettelot (käyttötarkoitus: hankinta ja kustannusohjaus)  Tuotetiedot (käyttötarkoitus: hankintojen valmistelu) | Ovatko suunnitelmat ristiriidattomia ja rakentamiskelpoisia?  Onko informaatio riittävä hankintoihin? |
@@ -267,9 +263,8 @@ Taulukko 5: Esimerkkitaulukko projektin päätöksentekopisteistä, päätöksis
 
 Esimerkkimääritys taulukkomuodossa:
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Etappi | Toimitettava informaatio | Toimitusajankohta | Päätöksentekopiste | Tarkoitus |
+| --- | --- | --- | --- | --- |
 | **Lähtötietojen validointi** | Lähtötietomalli ja lähtötietoaineistot | Projektin alussa | - | Lähtötietojen kattavuuden ja luotettavuuden varmistaminen |
 | **Luonnosvaiheen tarkastus** | Alustava tietomalli ja tilaohjelman tarkastelu | 2 viikkoa ennen hankepäätöstä | Hankepäätös | Toteutettavuuden ja kustannusraamin varmistaminen |
 | **Suunnittelun välikoordinaatio** | Eri suunnittelualojen mallit | Säännöllisesti (2–4 viikon välein) | - | Suunnitelmien yhteensovitus ja ristiriitojen tunnistaminen |
@@ -474,9 +469,8 @@ Sisällytä vähintään:
 
 Varmista, että valitut standardit tukevat sekä jäsentelyä että informaatiotarvemäärittelyä ja mahdollistavat tiedon koneluettavan tarkastamisen.
 
-|  |  |  |
-| --- | --- | --- |
 | Käyttötarkoitus | Standardi / käytäntö | Kuvaus |
+| --- | --- | --- |
 | Informaation hallinta | ISO 19650 standardisarja | Rakennuksia ja infrarakenteita koskevien tietojen organisointi ja digitalisointi, mukaan lukien rakennetun ympäristön tietojen mallintaminen ja hallinta hyödyntämällä rakennettujen kohteiden tietomallinnusta |
 | Informaatiotarpeen (LOIN) määrittelytapa | ISO 7817-1:2024 | Building information modelling — Level of information need - Part 1: Concepts and principles |
 | Käyttötapauskuvauksien laatiminen | ISO 29481-1:2025 | Building information models — Information delivery manual Part 1: Methodology and format |
@@ -498,9 +492,8 @@ Voit:
 
 **Varmista**, että valitut määrittelyt tukevat käyttötarkoituksia, kohteiden jäsentelyjä ja informaatiotarvemäärittelyjä.
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Käyttötarkoitus | Versio | Nimikkeistö tai koodisto | Kuvaus |
+| --- | --- | --- | --- |
 | InfraBIM-nimikkeistö | 2026.1 | <https://identifier.buildingsmart.org/uri/bs-finland/bs-finland-infraBIM-nimikkeisto/2026.1> |  |
 | Talotekniikan tuoteosakoodistot | 1.0 | <http://uri.suomi.fi/codelist/rytj/LVI-TUOTEOSA_Versio_1_0> |  |
 | Talotekniikan järjestelmäkoodisto | 1.0 | <http://uri.suomi.fi/codelist/rytj/LVI-JARJESTELMA_Versio_1_0> |  |
@@ -519,9 +512,8 @@ Sisällytä vähintään:
 
 **Varmista**, että tiedostomuodot ja versiot tukevat yhteentoimivuutta ja informaation pitkäaikaista käyttöä.
 
-|  |  |  |
-| --- | --- | --- |
 | Käyttötarkoitus | Tiedostomuoto ja versio | Kuvaus |
+| --- | --- | --- |
 | Tietomallit | Natiivi ja IFC 4.3 |  |
 | Dokumentit | PDF |  |
 |  |  |  |
@@ -623,9 +615,8 @@ Huom.! Pidä määrittely käytännön läheisenä:
 * Ajantasaisuus
 * Mahdolliset puutteet tai rajoitteet
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Informaatio | Sisällön kuvaus | Sijainti | Tarkkuustaso ja ajantasaisuus | Puutteet tai rajoitteet |
+| --- | --- | --- | --- | --- |
 | Olemassa olevat piirustukset | Rakennuksen alkuperäiset ja muutossuunnitelmien piirustukset (arkkitehti, rakenne, talotekniikka) | Projektipankki / arkisto (linkki) | Vaihteleva, pääosin suunnittelutasoinen | Osittain vanhentunut |
 | Inventointimalli | Kohteesta laadittu tietomalli nykytilanteesta | Projektipankki / CDE | Yleistetty, ei kaikkia rakennusosia | Ei sisällä talotekniikkaa |
 | Mittausaineisto | Laserkeilausaineisto pistepilvimuodossa | Erillinen tiedostopalvelu (linkki) | Korkea geometrinen tarkkuus. Ajantasainen mittaushetkellä. | - |
@@ -644,9 +635,8 @@ Taulukko 10: Taulukkomuotoinen esitys omaisuuskohteen olemassa olevasta informaa
 
 **Varmista**, että resurssien käyttö on yhdenmukaista projektin osapuolten välillä.
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Resurssi | Kuvaus | Sijainti | Käyttöperiaatteet |
+| --- | --- | --- | --- |
 | Asiakirjamallit | Projektissa käytettävät raportti-, piirustus- ja luovutusaineiston mallipohjat | Projektipankki / CDE (linkki) | Käytettävä kaikissa toimituksissa. Mallipohjia ei saa muuttaa ilman hyväksyntää |
 | Tyylikirjastot | Piirustusten ja tietomallien tyylikirjastot | Projektipankki / suunnitteluympäristö | Käytettävä yhdenmukaisesti kaikilla suunnittelualoilla |
 | Objektikirjastot | Mallinnuksessa käytettävät vakioidut objektit ja rakennusosat | Mallipalvelin / CDE | Käytettävä ensisijaisesti. Poikkeamat sovittava erikseen |
@@ -669,9 +659,8 @@ Taulukko 11: Taulukkomuotoinen esitys projektissa käytettävistä jaetuista res
 * informaatiotarpeita (LoIN)
 * tiedon koneluettavaa tarkastamista
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Kirjastot | Kuvaus | Käyttötarkoitus | Sijainti | Käyttöperiaate |
+| --- | --- | --- | --- | --- |
 | IDS-tarkastussäännöt (esim. RAVA3X5) | Rakentamisluvan vaatimustenmukaisuuden tarkastamiseen käytettävät koneluettavat säännöt | Tietomallien automaattinen tarkastus ja vaatimustenmukaisuuden todentaminen | Rava3pro.fi / projektipankki | Käytettävä sovituissa tarkastuksissa ennen toimitusta |
 | bSDD-koodistot | Rakennusosien ja ominaisuustietojen standardoidut määrittelyt | Tietosisällön yhdenmukaistaminen ja koneluettavuus | https://search.bsdd.buildingsmart.org | Käytettävä ominaisuustietojen määrittelyssä |
 | Kansalliset nimikkeistöt ja koodistot | Tunnisteet ja nimeämiskäytännöt (esim. tuoteosat, järjestelmät) | Tiedon tunnistaminen ja yhteensopivuus järjestelmien välillä | URI-palvelut / dokumentaatio | Käytettävä tiedon nimeämisessä ja luokittelussa |
@@ -740,9 +729,8 @@ Taulukko 12: Taulukkomuotoinen esitys projektissa käytettävistä kansallisissa
 
 Informaatiomallinnuksen toteutussuunnitelma (BEP) on toimitustiimin laatima kuvaus siitä, miten informaation vaihdon vaatimukset (EIR) toteutetaan projektissa.
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
 | Informaation vaihdon vaatimukset EIR | | Toimitustiimin (ennen toimeksiantoa tehtävä) informaatiomallinnuksen toteutussuunnitelma (BEP) | | |
+| --- | --- | --- | --- | --- |
 | Toimeksiantajan vaatimus | | Vastuullisen toimeksisaajan vastaus | | |
 | EIR viite | EIR kuvaus - Miksi | EIR viite | Toimitustiimin vastaus informaation vaihdon vaatimukseen | Toimitustiimin tavoitteet informaation toimitukselle |
 | [EIR viite] | [EIR nimi]  Tarkoitus: [tarkoituksen kuvaus ja PIR / AIR-viittaus]  PIR/AIR viite: [viittaus PIR/AIR vaatimukseen]  Vaatimukset: [Vaatimuksen kuvaus] | [EIR viite] | [viittaus/kuvaus] |  |
@@ -767,9 +755,8 @@ Kuva 12: Yhteisen tietoympäristön (CDE) ratkaisu ja työnkulku
 
 Ratkaisut jaetaan kahteen ryhmään: toimeksiantajan vastuulla oleviin ratkaisuihin, jotka muodostavat projektin yhteisen työskentely-ympäristön, sekä toimeksisaajan vastuulla oleviin ratkaisuihin, joita käytetään informaation tuottamiseen ja tarkastamiseen.
 
-|  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
 | Ratkaisun käyttötarkoitus | Ratkaisusta vastaava osapuoli | Ohjelmisto | | Käytettävä laitteisto | Kustannusvastuu |
+| --- | --- | --- | --- | --- | --- |
 | **Toimeksiantajan vastuulla olevat ratkaisut** | | | | | |
 | Tietomallienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  |  |
 | Dokumenttienhallinta | Toimeksiantaja | [ohjelmiston nimi] | [ohjelmiston versio] |  | Toimeksiantaja |
@@ -830,9 +817,8 @@ Informaatiokoosteiden (tiedostojen, mallien ja dokumenttien) status muuttuu vaih
 
 Alla olevaa listaa voidaan käyttää pohjana.
 
-|  |  |
-| --- | --- |
 | Yhteisen tietoympäristön tarkistuslista | |
+| --- | --- |
 | Saatavuus ja käyttäjäoikeudet | |
 |  | Mahdollisuus hallita käyttäjiä sekä myöntää ja peruuttaa käyttöoikeuksia |
 |  | Mahdollisuus hallita, kenellä on pääsy tiettyihin tietoihin, tiedostoihin ja aineistoihin |
