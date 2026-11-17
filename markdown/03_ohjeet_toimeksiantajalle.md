@@ -187,7 +187,7 @@ Esimerkkisisältö:
 Esimerkkiteemat ja tavoitteet:
 
 | PIR-tunnus | Käyttötarkoitus | Tavoite |
-| --- | --- | --- |
+| ---- | ------------------ | ------------------ |
 | PIR-01 | Strategiset tavoitteet ja liiketoiminnan tuki | Varmistaa, että hanke tukee tilaajan strategisia tavoitteita ja liiketoimintaa sekä että tavoitteiden toteutumista voidaan arvioida päätöksenteon tueksi. |
 | PIR-02 | Käyttöarvo ja toiminnallisuus | Varmistaa, että tilat ja ympäristö täyttävät käyttäjien toiminnalliset vaatimukset ja tukevat suunniteltua käyttöä. |
 | PIR-03 | Työ- ja käyttöturvallisuus | Varmistaa, että suunnitteluratkaisut mahdollistavat turvallisen toteutuksen ja käytön sekä että keskeiset turvallisuusriskit voidaan tunnistaa ja hallita ennen toteutusta. |
