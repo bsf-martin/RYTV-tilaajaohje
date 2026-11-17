@@ -327,7 +327,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: var(--sp-12) var(--sp-16);
   background: var(--c-white);
   border-radius: var(--r-md);
-  box-shadow: 0 1px 2px rgba(0, 38, 81, 0.08), 0 4px 16px rgba(0, 38, 81, 0.06);
 }
 .page > h1 { scroll-margin-top: var(--sp-12); }
 .page > :last-child { margin-bottom: 0; }
